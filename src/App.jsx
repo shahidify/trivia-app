@@ -33,7 +33,6 @@ function App() {
   }
 
   const handleAnswer = (selected) => {
-    console.log('Submitting answer:', selected, 'for question id:', currentId);
     fetch('http://localhost:5000/api/check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -41,7 +40,6 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log('Backend response:', data);
         if (data.correct) {
           const newScore = score + 1;
           setScore(newScore);
