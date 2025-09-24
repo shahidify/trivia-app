@@ -35,6 +35,9 @@ app.post('/api/check', (req, res) => {
     res.status(404).json({ error: 'Question not found' });
     return;
   }
+  console.log(
+    `Checking answer for question ${id}: received="${answer}", correct="${question.answer}"`
+  );
   res.json({ correct: question.answer === answer });
 });
 

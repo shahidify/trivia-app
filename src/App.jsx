@@ -1,9 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useFetch from './hooks/useFetch';
+import Question from './components/Question';
+import Options from './components/Options';
+import GameUI from './components/GameUI';
+import './App.css';
 
 function App() {
   const [started, setStarted] = useState(false);
   const [currentId, setCurrentId] = useState(1);
-  const [question, setQuestion] = useState(null);
+  // Removed unused questionUrl state
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(() =>
     parseInt(localStorage.getItem('highScore') || '0')
@@ -11,21 +16,24 @@ function App() {
   const [feedback, setFeedback] = useState(null);
   const [gameOver, setGameOver] = useState(false);
 
-  useEffect(() => {
-    if (started && !gameOver) {
-      fetch(`http://localhost:5000/api/question/${currentId}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.error) {
-            setGameOver(true);
-          } else {
-            setQuestion(data);
-          }
-        });
-    }
-  }, [started, currentId, gameOver]);
+  // Use useFetch for fetching question
+  const {
+    data: question,
+    error: questionError,
+    loading: questionLoading,
+  } = useFetch(
+    started && !gameOver
+      ? `http://localhost:5000/api/question/${currentId}`
+      : null
+  );
+
+  // Handle error from useFetch
+  if (questionError) {
+    if (!gameOver) setGameOver(true);
+  }
 
   const handleAnswer = (selected) => {
+    console.log('Submitting answer:', selected, 'for question id:', currentId);
     fetch('http://localhost:5000/api/check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,6 +41,7 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log('Backend response:', data);
         if (data.correct) {
           const newScore = score + 1;
           setScore(newScore);
@@ -58,7 +67,7 @@ function App() {
     setScore(0);
     setFeedback(null);
     setGameOver(false);
-    setQuestion(null);
+    // setQuestion(null) removed, question is managed by useFetch
   };
 
   const restartGame = () => {
@@ -76,19 +85,9 @@ function App() {
     );
   }
 
-  if (gameOver) {
-    return (
-      <div className="app">
-        <h1>Game Over!</h1>
-        <p>Your score: {score}</p>
-        <p>High Score: {highScore}</p>
-        <button onClick={restartGame}>Play Again</button>
-      </div>
-    );
-  }
+  if (questionLoading || !question) return <div>Loading...</div>;
 
-  if (!question) return <div>Loading...</div>;
-
+  // Prepare options
   const correct = question.answer || question.correctAnswer;
   const options = question.options ? [...question.options] : [];
   if (!options.includes(correct)) options.push(correct);
@@ -96,28 +95,23 @@ function App() {
 
   return (
     <div className="app">
-      <div className="score">
-        Score: {score} | High Score: {highScore}
-      </div>
-      <div className="question-container">
-        <h2>{question.question}</h2>
-        <div className="options">
-          {shuffledOptions.map((option) => (
-            <button
-              key={option}
-              onClick={() => handleAnswer(option)}
-              disabled={!!feedback}
-            >
-              {option}
-            </button>
-          ))}
+      <GameUI
+        score={score}
+        highScore={highScore}
+        feedback={feedback}
+        gameOver={gameOver}
+        onRestart={restartGame}
+      />
+      {!gameOver && (
+        <div className="question-container">
+          <Question question={question} />
+          <Options
+            options={shuffledOptions}
+            onSelect={handleAnswer}
+            disabled={!!feedback}
+          />
         </div>
-        {feedback && (
-          <div className={feedback === 'Correct!' ? 'correct' : 'incorrect'}>
-            {feedback}
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 }
