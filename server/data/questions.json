@@ -299,6 +299,66 @@
       "question": "Which country is famous for maple leaves?",
       "answer": "Canada",
       "options": ["USA", "Canada", "UK", "Australia"]
+    },
+    {
+      "id": 51,
+      "question": "Which country is known for maple syrup?",
+      "answer": "Canada",
+      "options": ["USA", "Canada", "Russia", "Norway"]
+    },
+    {
+      "id": 52,
+      "question": "What is the capital of New Zealand?",
+      "answer": "Wellington",
+      "options": ["Auckland", "Wellington", "Christchurch", "Hamilton"]
+    },
+    {
+      "id": 53,
+      "question": "Which country is famous for the Colosseum?",
+      "answer": "Italy",
+      "options": ["Greece", "Italy", "Turkey", "Spain"]
+    },
+    {
+      "id": 54,
+      "question": "What is the capital of Finland?",
+      "answer": "Helsinki",
+      "options": ["Espoo", "Tampere", "Helsinki", "Vantaa"]
+    },
+    {
+      "id": 55,
+      "question": "Which country is known for the Serengeti National Park?",
+      "answer": "Tanzania",
+      "options": ["Kenya", "Tanzania", "South Africa", "Botswana"]
+    },
+    {
+      "id": 56,
+      "question": "What is the capital of Belgium?",
+      "answer": "Brussels",
+      "options": ["Antwerp", "Brussels", "Ghent", "Bruges"]
+    },
+    {
+      "id": 57,
+      "question": "Which country is famous for the Acropolis?",
+      "answer": "Greece",
+      "options": ["Italy", "Greece", "Turkey", "Egypt"]
+    },
+    {
+      "id": 58,
+      "question": "What is the capital of Norway?",
+      "answer": "Oslo",
+      "options": ["Bergen", "Trondheim", "Oslo", "Stavanger"]
+    },
+    {
+      "id": 59,
+      "question": "Which country is known for the Galápagos Islands?",
+      "answer": "Ecuador",
+      "options": ["Peru", "Ecuador", "Colombia", "Chile"]
+    },
+    {
+      "id": 60,
+      "question": "What is the capital of Czech Republic?",
+      "answer": "Prague",
+      "options": ["Brno", "Ostrava", "Prague", "Plzen"]
     }
   ]
 }
