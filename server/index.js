@@ -17,15 +17,28 @@ const questions = JSON.parse(
   fs.readFileSync(join(__dirname, 'data', 'questions.json'), 'utf8')
 );
 
-app.get('/api/question/:id', (req, res) => {
-  const question = questions.questions.find(
-    (q) => q.id === parseInt(req.params.id)
-  );
-  if (!question) {
-    res.status(404).json({ error: 'Question not found' });
-    return;
+// Fisher-Yates shuffle for arrays
+function shuffle(array) {
+  const a = array.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
+  return a;
+}
+
+app.get('/api/question/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const question = questions.questions.find((q) => q.id === id);
+  if (!question) return res.status(404).json({ error: 'Question not found' });
   res.json(question);
+});
+
+// Return a randomized ordering of question IDs for a new game session
+app.get('/api/newgame', (req, res) => {
+  const ids = questions.questions.map((q) => q.id);
+  const order = shuffle(ids);
+  res.json({ order });
 });
 
 app.post('/api/check', (req, res) => {

@@ -7,7 +7,9 @@ import './App.css';
 
 function App() {
   const [started, setStarted] = useState(false);
-  const [currentId, setCurrentId] = useState(1);
+  const [order, setOrder] = useState(null); // array of question ids
+  const [_index, setIndex] = useState(0); // position in the order (value unused directly)
+  const [currentId, setCurrentId] = useState(null);
   // Removed unused questionUrl state
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(() =>
@@ -22,7 +24,7 @@ function App() {
     error: questionError,
     loading: questionLoading,
   } = useFetch(
-    started && !gameOver
+    started && !gameOver && currentId
       ? `http://localhost:5000/api/question/${currentId}`
       : null
   );
@@ -50,7 +52,16 @@ function App() {
           setFeedback('Correct!');
           setTimeout(() => {
             setFeedback(null);
-            setCurrentId((prev) => prev + 1);
+            // advance to next question in order
+            setIndex((i) => {
+              const next = i + 1;
+              if (!order || next >= order.length) {
+                setGameOver(true);
+                return i;
+              }
+              setCurrentId(order[next]);
+              return next;
+            });
           }, 1000);
         } else {
           setFeedback('Incorrect!');
@@ -61,11 +72,27 @@ function App() {
 
   const startGame = () => {
     setStarted(true);
-    setCurrentId(1);
+    setOrder(null);
+    setIndex(0);
+    setCurrentId(null);
     setScore(0);
     setFeedback(null);
     setGameOver(false);
     // setQuestion(null) removed, question is managed by useFetch
+    // fetch a new shuffled order from server
+    fetch('http://localhost:5000/api/newgame')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.order && data.order.length > 0) {
+          setOrder(data.order);
+          setIndex(0);
+          setCurrentId(data.order[0]);
+        } else {
+          // fallback: start from id 1
+          setCurrentId(1);
+        }
+      })
+      .catch(() => setCurrentId(1));
   };
 
   const restartGame = () => {
