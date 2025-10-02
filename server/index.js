@@ -17,7 +17,7 @@ const questions = JSON.parse(
   fs.readFileSync(join(__dirname, 'data', 'questions.json'), 'utf8')
 );
 
-// Fisher-Yates shuffle for arrays
+// FY shuffle for arrays
 function shuffle(array) {
   const a = array.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -34,7 +34,6 @@ app.get('/api/question/:id', (req, res) => {
   res.json(question);
 });
 
-// Return a randomized ordering of question IDs for a new game session
 app.get('/api/newgame', (req, res) => {
   const ids = questions.questions.map((q) => q.id);
   const order = shuffle(ids);

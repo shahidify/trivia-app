@@ -359,6 +359,136 @@
       "question": "What is the capital of Czech Republic?",
       "answer": "Prague",
       "options": ["Brno", "Ostrava", "Prague", "Plzen"]
+    },
+    {
+      "id": 61,
+      "question": "What is the capital of the Philippines?",
+      "answer": "Manila",
+      "options": ["Manila", "Cebu", "Davao", "Quezon City"]
+    },
+    {
+      "id": 62,
+      "question": "Which sea lies between Africa and the Arabian Peninsula?",
+      "answer": "Red Sea",
+      "options": ["Red Sea", "Black Sea", "Mediterranean Sea", "Baltic Sea"]
+    },
+    {
+      "id": 63,
+      "question": "What is the largest island in the world?",
+      "answer": "Greenland",
+      "options": ["Greenland", "New Guinea", "Borneo", "Madagascar"]
+    },
+    {
+      "id": 64,
+      "question": "Which river flows through Baghdad?",
+      "answer": "Tigris",
+      "options": ["Euphrates", "Tigris", "Nile", "Jordan"]
+    },
+    {
+      "id": 65,
+      "question": "What is the capital of Chile?",
+      "answer": "Santiago",
+      "options": ["Valparaíso", "Santiago", "Concepción", "Antofagasta"]
+    },
+    {
+      "id": 66,
+      "question": "Which country has the most time zones (including overseas territories)?",
+      "answer": "France",
+      "options": ["Russia", "USA", "France", "China"]
+    },
+    {
+      "id": 67,
+      "question": "What is the capital of Vietnam?",
+      "answer": "Hanoi",
+      "options": ["Hanoi", "Ho Chi Minh City", "Da Nang", "Hue"]
+    },
+    {
+      "id": 68,
+      "question": "In which US state is the Grand Canyon located?",
+      "answer": "Arizona",
+      "options": ["Utah", "Arizona", "Nevada", "Colorado"]
+    },
+    {
+      "id": 69,
+      "question": "What is the deepest ocean trench in the world?",
+      "answer": "Mariana Trench",
+      "options": [
+        "Mariana Trench",
+        "Tonga Trench",
+        "Philippine Trench",
+        "Kuril–Kamchatka Trench"
+      ]
+    },
+    {
+      "id": 70,
+      "question": "Which mountain range is commonly considered the boundary between Europe and Asia?",
+      "answer": "Ural Mountains",
+      "options": ["Alps", "Ural Mountains", "Caucasus", "Carpathians"]
+    },
+    {
+      "id": 71,
+      "question": "What is the capital of Colombia?",
+      "answer": "Bogotá",
+      "options": ["Bogotá", "Medellín", "Cali", "Barranquilla"]
+    },
+    {
+      "id": 72,
+      "question": "Which strait divides the European and Asian parts of Turkey?",
+      "answer": "Bosporus",
+      "options": ["Bosporus", "Gibraltar", "Hormuz", "Malacca"]
+    },
+    {
+      "id": 73,
+      "question": "What is the currency of Japan?",
+      "answer": "Yen",
+      "options": ["Yuan", "Won", "Yen", "Dollar"]
+    },
+    {
+      "id": 74,
+      "question": "Casablanca is a major city in which country?",
+      "answer": "Morocco",
+      "options": ["Morocco", "Algeria", "Tunisia", "Libya"]
+    },
+    {
+      "id": 75,
+      "question": "What is the capital of Peru?",
+      "answer": "Lima",
+      "options": ["Lima", "Cusco", "Arequipa", "Trujillo"]
+    },
+    {
+      "id": 76,
+      "question": "Which river flows through London?",
+      "answer": "Thames",
+      "options": ["Thames", "Seine", "Rhine", "Danube"]
+    },
+    {
+      "id": 77,
+      "question": "Which is the smallest independent country by land area?",
+      "answer": "Vatican City",
+      "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"]
+    },
+    {
+      "id": 78,
+      "question": "Transylvania is a historic region located in which country?",
+      "answer": "Romania",
+      "options": ["Romania", "Hungary", "Bulgaria", "Serbia"]
+    },
+    {
+      "id": 79,
+      "question": "What is the capital of the United Arab Emirates?",
+      "answer": "Abu Dhabi",
+      "options": ["Abu Dhabi", "Dubai", "Sharjah", "Ajman"]
+    },
+    {
+      "id": 80,
+      "question": "Which lake is the largest freshwater lake by surface area?",
+      "answer": "Lake Superior",
+      "options": [
+        "Lake Victoria",
+        "Lake Superior",
+        "Lake Baikal",
+        "Lake Tanganyika"
+      ]
     }
   ]
 }
