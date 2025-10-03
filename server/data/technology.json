@@ -1,0 +1,117 @@
+{
+  "slug": "technology",
+  "title": "Technology",
+  "description": "Tech history, companies, and terminology.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Who co-founded Microsoft along with Paul Allen?",
+      "answer": "Bill Gates",
+      "options": ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Larry Page"]
+    },
+    {
+      "id": 2,
+      "question": "What does 'HTTP' stand for?",
+      "answer": "HyperText Transfer Protocol",
+      "options": [
+        "HyperText Transfer Protocol",
+        "Hyperlink Transfer Protocol",
+        "HyperText Transmission Program",
+        "High Transfer Text Protocol"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which company developed the Android operating system?",
+      "answer": "Google",
+      "options": ["Apple", "Microsoft", "Google", "Samsung"]
+    },
+    {
+      "id": 4,
+      "question": "What is the name of Apple's virtual assistant?",
+      "answer": "Siri",
+      "options": ["Alexa", "Cortana", "Siri", "Google Assistant"]
+    },
+    {
+      "id": 5,
+      "question": "Which programming language is primarily used for iOS development?",
+      "answer": "Swift",
+      "options": ["Java", "Kotlin", "Swift", "Objective-C"]
+    },
+    {
+      "id": 6,
+      "question": "What does 'AI' stand for?",
+      "answer": "Artificial Intelligence",
+      "options": [
+        "Automated Interface",
+        "Artificial Intelligence",
+        "Advanced Internet",
+        "Applied Informatics"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Which company created the first iPhone?",
+      "answer": "Apple",
+      "options": ["Samsung", "Nokia", "Apple", "Motorola"]
+    },
+    {
+      "id": 8,
+      "question": "What does 'CPU' stand for?",
+      "answer": "Central Processing Unit",
+      "options": [
+        "Central Processing Unit",
+        "Computer Processing Unit",
+        "Central Program Unit",
+        "Core Processing Unit"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Which company owns the social network Facebook?",
+      "answer": "Meta",
+      "options": ["Google", "Meta", "Twitter", "Snap Inc."]
+    },
+    {
+      "id": 10,
+      "question": "What is the name of the search engine developed by Microsoft?",
+      "answer": "Bing",
+      "options": ["Bing", "Yahoo", "DuckDuckGo", "Ask"]
+    },
+    {
+      "id": 11,
+      "question": "Which technology is used to create decentralized ledgers?",
+      "answer": "Blockchain",
+      "options": ["Cloud", "Blockchain", "AI", "IoT"]
+    },
+    {
+      "id": 12,
+      "question": "Which company created the Java programming language?",
+      "answer": "Sun Microsystems",
+      "options": ["Oracle", "Sun Microsystems", "IBM", "Microsoft"]
+    },
+    {
+      "id": 13,
+      "question": "What does 'URL' stand for?",
+      "answer": "Uniform Resource Locator",
+      "options": [
+        "Uniform Resource Locator",
+        "Universal Resource Link",
+        "Uniform Remote Locator",
+        "Universal Resource Locator"
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Which company develops the open-source web browser Chromium?",
+      "answer": "Google",
+      "options": ["Mozilla", "Google", "Microsoft", "Apple"]
+    },
+    {
+      "id": 15,
+      "question": "What is the primary language used for Android app development in recent years?",
+      "answer": "Kotlin",
+      "options": ["Java", "Kotlin", "Swift", "C#"]
+    }
+  ]
+}

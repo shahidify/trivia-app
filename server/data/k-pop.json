@@ -1,0 +1,102 @@
+{
+  "slug": "k-pop",
+  "title": "K-Pop",
+  "description": "Popular K-Pop trivia: groups, songs, and idols.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which K-pop group released the song 'Dynamite'?",
+      "answer": "BTS",
+      "options": ["BLACKPINK", "BTS", "TWICE", "EXO"]
+    },
+    {
+      "id": 2,
+      "question": "Which girl group is known for the song 'How You Like That'?",
+      "answer": "BLACKPINK",
+      "options": ["Mamamoo", "Red Velvet", "BLACKPINK", "ITZY"]
+    },
+    {
+      "id": 3,
+      "question": "Which group debuted with the song 'Cheer Up'?",
+      "answer": "TWICE",
+      "options": ["GFriend", "TWICE", "SNSD", "Apink"]
+    },
+    {
+      "id": 4,
+      "question": "Which K-pop boy group has members RM, Jin, Suga, and J-Hope?",
+      "answer": "BTS",
+      "options": ["Seventeen", "BTS", "NCT", "Big Bang"]
+    },
+    {
+      "id": 5,
+      "question": "Which company formed the group EXO?",
+      "answer": "SM Entertainment",
+      "options": [
+        "JYP Entertainment",
+        "YG Entertainment",
+        "SM Entertainment",
+        "BigHit/Hybe"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Which soloist released the hit 'Gangnam Style'?",
+      "answer": "PSY",
+      "options": ["G-Dragon", "PSY", "Rain", "BoA"]
+    },
+    {
+      "id": 7,
+      "question": "Which girl group performed 'Wannabe' in 2020?",
+      "answer": "ITZY",
+      "options": ["ITZY", "BLACKPINK", "TWICE", "(G)I-DLE"]
+    },
+    {
+      "id": 8,
+      "question": "Which K-pop group is known as the 'Nation's Girl Group' in Korea?",
+      "answer": "SNSD",
+      "options": ["SNSD", "Red Velvet", "Brown Eyed Girls", "Wonder Girls"]
+    },
+    {
+      "id": 9,
+      "question": "Which group released the album 'Map of the Soul: 7'?",
+      "answer": "BTS",
+      "options": ["BTS", "MONSTA X", "TXT", "Stray Kids"]
+    },
+    {
+      "id": 10,
+      "question": "Which idol is a member of the group BLACKPINK?",
+      "answer": "Jennie",
+      "options": ["Jennie", "IU", "Sunmi", "Chungha"]
+    },
+    {
+      "id": 11,
+      "question": "Which group debuted first: EXO or NCT?",
+      "answer": "EXO",
+      "options": ["EXO", "NCT", "They debuted same year", "None of the above"]
+    },
+    {
+      "id": 12,
+      "question": "Which K-pop group has sub-units named D&E and Super Junior-M?",
+      "answer": "Super Junior",
+      "options": ["Super Junior", "SHINee", "Big Bang", "TVXQ"]
+    },
+    {
+      "id": 13,
+      "question": "Which female soloist is known for the song 'Palette'?",
+      "answer": "IU",
+      "options": ["IU", "Taeyeon", "Sunmi", "Chungha"]
+    },
+    {
+      "id": 14,
+      "question": "Which rookie group released 'God's Menu'?",
+      "answer": "Stray Kids",
+      "options": ["ATEEZ", "Stray Kids", "TXT", "ENHYPEN"]
+    },
+    {
+      "id": 15,
+      "question": "Which K-pop band is associated with the label BigHit (Hybe)?",
+      "answer": "BTS",
+      "options": ["BTS", "Blackpink", "EXO", "Red Velvet"]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "sports",
+  "title": "Sports",
+  "description": "General sports trivia across football, basketball, and more.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which country won the FIFA World Cup in 2018?",
+      "answer": "France",
+      "options": ["Croatia", "France", "Brazil", "Germany"]
+    },
+    {
+      "id": 2,
+      "question": "Which player has won the most NBA championships as a player?",
+      "answer": "Bill Russell",
+      "options": [
+        "Michael Jordan",
+        "Kobe Bryant",
+        "Bill Russell",
+        "LeBron James"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "In which sport would you perform a 'slam dunk'?",
+      "answer": "Basketball",
+      "options": ["Volleyball", "Basketball", "Tennis", "Handball"]
+    },
+    {
+      "id": 4,
+      "question": "How many players are on a football (soccer) team on the pitch?",
+      "answer": "11",
+      "options": ["10", "11", "12", "9"]
+    },
+    {
+      "id": 5,
+      "question": "Which country hosted the 2016 Summer Olympics?",
+      "answer": "Brazil",
+      "options": ["China", "Brazil", "UK", "Russia"]
+    },
+    {
+      "id": 6,
+      "question": "Which sport uses a 'let' in its scoring rules?",
+      "answer": "Tennis",
+      "options": ["Badminton", "Tennis", "Table Tennis", "Squash"]
+    },
+    {
+      "id": 7,
+      "question": "Which country is known for the Tour de France cycling race?",
+      "answer": "France",
+      "options": ["Italy", "France", "Spain", "Belgium"]
+    },
+    {
+      "id": 8,
+      "question": "Which sport is associated with the Stanley Cup?",
+      "answer": "Ice Hockey",
+      "options": ["Basketball", "Baseball", "Ice Hockey", "Football"]
+    },
+    {
+      "id": 9,
+      "question": "How many minutes are in a standard professional football (soccer) match?",
+      "answer": "90",
+      "options": ["60", "70", "90", "120"]
+    },
+    {
+      "id": 10,
+      "question": "Which athlete has the most Olympic gold medals?",
+      "answer": "Michael Phelps",
+      "options": [
+        "Usain Bolt",
+        "Michael Phelps",
+        "Larisa Latynina",
+        "Mark Spitz"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "In which country did baseball originate as an organized sport?",
+      "answer": "USA",
+      "options": ["UK", "USA", "Japan", "Cuba"]
+    },
+    {
+      "id": 12,
+      "question": "Which sport features a pommel horse?",
+      "answer": "Gymnastics",
+      "options": ["Equestrian", "Gymnastics", "Weightlifting", "Diving"]
+    },
+    {
+      "id": 13,
+      "question": "How many players are on a rugby union team?",
+      "answer": "15",
+      "options": ["13", "11", "15", "7"]
+    },
+    {
+      "id": 14,
+      "question": "Which country hosted the first modern Olympic Games in 1896?",
+      "answer": "Greece",
+      "options": ["Italy", "Greece", "France", "UK"]
+    },
+    {
+      "id": 15,
+      "question": "Which tennis tournament is played on clay courts?",
+      "answer": "French Open",
+      "options": ["Wimbledon", "US Open", "Australian Open", "French Open"]
+    }
+  ]
+}
