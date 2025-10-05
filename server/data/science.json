@@ -1,0 +1,107 @@
+{
+  "slug": "science",
+  "title": "Science",
+  "description": "Basic science questions suitable for elementary and middle school.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the process called where plants make food using sunlight?",
+      "answer": "Photosynthesis",
+      "options": ["Respiration", "Photosynthesis", "Digestion", "Evaporation"]
+    },
+    {
+      "id": 2,
+      "question": "What are the three states of matter commonly taught in school?",
+      "answer": "Solid, liquid, gas",
+      "options": [
+        "Solid, plasma, gas",
+        "Solid, liquid, gas",
+        "Liquid, gas, plasma",
+        "Solid, liquid, energy"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which planet is known as the Red Planet?",
+      "answer": "Mars",
+      "options": ["Venus", "Mars", "Jupiter", "Mercury"]
+    },
+    {
+      "id": 4,
+      "question": "What force pulls objects toward Earth?",
+      "answer": "Gravity",
+      "options": ["Magnetism", "Friction", "Gravity", "Electricity"]
+    },
+    {
+      "id": 5,
+      "question": "Which gas do humans need to breathe to live?",
+      "answer": "Oxygen",
+      "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"]
+    },
+    {
+      "id": 6,
+      "question": "Water evaporates and then condenses to form clouds. What is the name of this cycle?",
+      "answer": "The water cycle",
+      "options": [
+        "The rock cycle",
+        "The water cycle",
+        "The nitrogen cycle",
+        "The life cycle"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is the center of an atom called?",
+      "answer": "Nucleus",
+      "options": ["Proton", "Electron", "Nucleus", "Neutron"]
+    },
+    {
+      "id": 8,
+      "question": "What part of the plant absorbs water from the soil?",
+      "answer": "Roots",
+      "options": ["Leaves", "Stem", "Roots", "Flowers"]
+    },
+    {
+      "id": 9,
+      "question": "Which organ pumps blood around the body?",
+      "answer": "Heart",
+      "options": ["Lungs", "Brain", "Kidney", "Heart"]
+    },
+    {
+      "id": 10,
+      "question": "What do we call animals that eat only plants?",
+      "answer": "Herbivores",
+      "options": ["Carnivores", "Omnivores", "Herbivores", "Decomposers"]
+    },
+    {
+      "id": 11,
+      "question": "Which of the following is a non-renewable energy source?",
+      "answer": "Coal",
+      "options": ["Solar", "Wind", "Coal", "Hydropower"]
+    },
+    {
+      "id": 12,
+      "question": "Rocks are classified into three main types. Which is NOT one of them?",
+      "answer": "Plastic",
+      "options": ["Igneous", "Metamorphic", "Plastic", "Sedimentary"]
+    },
+    {
+      "id": 13,
+      "question": "What instrument would you use to look at tiny cells?",
+      "answer": "Microscope",
+      "options": ["Telescope", "Microscope", "Thermometer", "Barometer"]
+    },
+    {
+      "id": 14,
+      "question": "Which sense helps you tell the temperature of something?",
+      "answer": "Touch",
+      "options": ["Smell", "Sight", "Touch", "Hearing"]
+    },
+    {
+      "id": 15,
+      "question": "What do plants take in from the air during photosynthesis?",
+      "answer": "Carbon dioxide",
+      "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"]
+    }
+  ]
+}

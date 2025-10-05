@@ -142,9 +142,9 @@
     },
     {
       "id": 24,
-      "question": "Which country is known for maple syrup?",
-      "answer": "Canada",
-      "options": ["USA", "Canada", "Russia", "Norway"]
+      "question": "Which river flows through Paris?",
+      "answer": "Seine",
+      "options": ["Thames", "Seine", "Rhine", "Danube"]
     },
     {
       "id": 25,
@@ -304,9 +304,9 @@
     },
     {
       "id": 51,
-      "question": "Which country is known for maple syrup?",
-      "answer": "Canada",
-      "options": ["USA", "Canada", "Russia", "Norway"]
+      "question": "What is the capital of Ethiopia?",
+      "answer": "Addis Ababa",
+      "options": ["Nairobi", "Addis Ababa", "Khartoum", "Kampala"]
     },
     {
       "id": 52,
