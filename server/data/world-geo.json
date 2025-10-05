@@ -1,0 +1,496 @@
+{
+  "slug": "world-geo",
+  "title": "World Geography",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "options": ["London", "Berlin", "Paris", "Madrid"]
+    },
+    {
+      "id": 2,
+      "question": "Which is the largest continent?",
+      "answer": "Asia",
+      "options": ["Africa", "Asia", "Europe", "Australia"]
+    },
+    {
+      "id": 3,
+      "question": "What is the capital of Japan?",
+      "answer": "Tokyo",
+      "options": ["Seoul", "Tokyo", "Beijing", "Bangkok"]
+    },
+    {
+      "id": 4,
+      "question": "Which river is the longest in the world?",
+      "answer": "Nile",
+      "options": ["Amazon", "Yangtze", "Mississippi", "Nile"]
+    },
+    {
+      "id": 5,
+      "question": "What is the capital of Canada?",
+      "answer": "Ottawa",
+      "options": ["Toronto", "Ottawa", "Vancouver", "Montreal"]
+    },
+    {
+      "id": 6,
+      "question": "Which country has the largest population?",
+      "answer": "China",
+      "options": ["India", "USA", "China", "Russia"]
+    },
+    {
+      "id": 7,
+      "question": "What is the capital of Australia?",
+      "answer": "Canberra",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"]
+    },
+    {
+      "id": 8,
+      "question": "Which ocean is the largest?",
+      "answer": "Pacific",
+      "options": ["Atlantic", "Indian", "Arctic", "Pacific"]
+    },
+    {
+      "id": 9,
+      "question": "What is the capital of Egypt?",
+      "answer": "Cairo",
+      "options": ["Cairo", "Tunis", "Rabat", "Algiers"]
+    },
+    {
+      "id": 10,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "answer": "Japan",
+      "options": ["China", "Japan", "Thailand", "Vietnam"]
+    },
+    {
+      "id": 11,
+      "question": "What is the capital of Russia?",
+      "answer": "Moscow",
+      "options": ["St. Petersburg", "Moscow", "Kiev", "Minsk"]
+    },
+    {
+      "id": 12,
+      "question": "Which desert is the largest hot desert?",
+      "answer": "Sahara",
+      "options": ["Gobi", "Kalahari", "Sahara", "Arabian"]
+    },
+    {
+      "id": 13,
+      "question": "What is the capital of Brazil?",
+      "answer": "Brasília",
+      "options": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"]
+    },
+    {
+      "id": 14,
+      "question": "Which mountain is the highest in the world?",
+      "answer": "Mount Everest",
+      "options": ["K2", "Kangchenjunga", "Mount Everest", "Lhotse"]
+    },
+    {
+      "id": 15,
+      "question": "What is the capital of Italy?",
+      "answer": "Rome",
+      "options": ["Venice", "Milan", "Rome", "Florence"]
+    },
+    {
+      "id": 16,
+      "question": "Which country is famous for tulips and windmills?",
+      "answer": "Netherlands",
+      "options": ["Belgium", "Netherlands", "Denmark", "Germany"]
+    },
+    {
+      "id": 17,
+      "question": "What is the capital of India?",
+      "answer": "New Delhi",
+      "options": ["Mumbai", "New Delhi", "Bangalore", "Kolkata"]
+    },
+    {
+      "id": 18,
+      "question": "Which continent is the smallest?",
+      "answer": "Australia",
+      "options": ["Europe", "Australia", "Antarctica", "South America"]
+    },
+    {
+      "id": 19,
+      "question": "What is the capital of Spain?",
+      "answer": "Madrid",
+      "options": ["Barcelona", "Madrid", "Valencia", "Seville"]
+    },
+    {
+      "id": 20,
+      "question": "Which country is known for the Eiffel Tower?",
+      "answer": "France",
+      "options": ["Italy", "France", "Germany", "UK"]
+    },
+    {
+      "id": 21,
+      "question": "What is the capital of Germany?",
+      "answer": "Berlin",
+      "options": ["Munich", "Frankfurt", "Berlin", "Hamburg"]
+    },
+    {
+      "id": 22,
+      "question": "Which country is famous for pyramids?",
+      "answer": "Egypt",
+      "options": ["Mexico", "Egypt", "Peru", "China"]
+    },
+    {
+      "id": 23,
+      "question": "What is the capital of South Africa?",
+      "answer": "Pretoria",
+      "options": ["Cape Town", "Pretoria", "Johannesburg", "Durban"]
+    },
+    {
+      "id": 24,
+      "question": "Which country is known for maple syrup?",
+      "answer": "Canada",
+      "options": ["USA", "Canada", "Russia", "Norway"]
+    },
+    {
+      "id": 25,
+      "question": "What is the capital of Mexico?",
+      "answer": "Mexico City",
+      "options": ["Guadalajara", "Mexico City", "Monterrey", "Puebla"]
+    },
+    {
+      "id": 26,
+      "question": "Which country is famous for kangaroos?",
+      "answer": "Australia",
+      "options": ["New Zealand", "Australia", "South Africa", "India"]
+    },
+    {
+      "id": 27,
+      "question": "What is the capital of Turkey?",
+      "answer": "Ankara",
+      "options": ["Istanbul", "Ankara", "Izmir", "Antalya"]
+    },
+    {
+      "id": 28,
+      "question": "Which country is known for the Taj Mahal?",
+      "answer": "India",
+      "options": ["Pakistan", "India", "Bangladesh", "Nepal"]
+    },
+    {
+      "id": 29,
+      "question": "What is the capital of Argentina?",
+      "answer": "Buenos Aires",
+      "options": ["Cordoba", "Rosario", "Buenos Aires", "Mendoza"]
+    },
+    {
+      "id": 30,
+      "question": "Which country is famous for sushi?",
+      "answer": "Japan",
+      "options": ["China", "Japan", "Korea", "Thailand"]
+    },
+    {
+      "id": 31,
+      "question": "What is the capital of Thailand?",
+      "answer": "Bangkok",
+      "options": ["Phuket", "Bangkok", "Chiang Mai", "Pattaya"]
+    },
+    {
+      "id": 32,
+      "question": "Which country is known for the Great Wall?",
+      "answer": "China",
+      "options": ["Japan", "China", "Mongolia", "Vietnam"]
+    },
+    {
+      "id": 33,
+      "question": "What is the capital of Greece?",
+      "answer": "Athens",
+      "options": ["Athens", "Thessaloniki", "Patras", "Heraklion"]
+    },
+    {
+      "id": 34,
+      "question": "Which country is famous for pizza?",
+      "answer": "Italy",
+      "options": ["France", "Italy", "Spain", "USA"]
+    },
+    {
+      "id": 35,
+      "question": "What is the capital of Sweden?",
+      "answer": "Stockholm",
+      "options": ["Gothenburg", "Stockholm", "Malmo", "Uppsala"]
+    },
+    {
+      "id": 36,
+      "question": "Which country is known for fjords?",
+      "answer": "Norway",
+      "options": ["Sweden", "Norway", "Finland", "Denmark"]
+    },
+    {
+      "id": 37,
+      "question": "What is the capital of Portugal?",
+      "answer": "Lisbon",
+      "options": ["Porto", "Lisbon", "Braga", "Coimbra"]
+    },
+    {
+      "id": 38,
+      "question": "Which country is famous for samba dance?",
+      "answer": "Brazil",
+      "options": ["Argentina", "Brazil", "Colombia", "Peru"]
+    },
+    {
+      "id": 39,
+      "question": "What is the capital of Saudi Arabia?",
+      "answer": "Riyadh",
+      "options": ["Jeddah", "Mecca", "Riyadh", "Dammam"]
+    },
+    {
+      "id": 40,
+      "question": "Which country is known for the Andes mountains?",
+      "answer": "Peru",
+      "options": ["Peru", "Chile", "Argentina", "Bolivia"]
+    },
+    {
+      "id": 41,
+      "question": "What is the capital of Indonesia?",
+      "answer": "Jakarta",
+      "options": ["Bali", "Jakarta", "Surabaya", "Bandung"]
+    },
+    {
+      "id": 42,
+      "question": "Which country is famous for tulips?",
+      "answer": "Netherlands",
+      "options": ["Belgium", "Netherlands", "Denmark", "Germany"]
+    },
+    {
+      "id": 43,
+      "question": "What is the capital of Kenya?",
+      "answer": "Nairobi",
+      "options": ["Mombasa", "Nairobi", "Kisumu", "Eldoret"]
+    },
+    {
+      "id": 44,
+      "question": "Which country is known for the Outback?",
+      "answer": "Australia",
+      "options": ["Australia", "USA", "Canada", "South Africa"]
+    },
+    {
+      "id": 45,
+      "question": "What is the capital of Poland?",
+      "answer": "Warsaw",
+      "options": ["Krakow", "Warsaw", "Gdansk", "Wroclaw"]
+    },
+    {
+      "id": 46,
+      "question": "Which country is famous for chocolate?",
+      "answer": "Switzerland",
+      "options": ["Belgium", "Switzerland", "France", "Italy"]
+    },
+    {
+      "id": 47,
+      "question": "What is the capital of Hungary?",
+      "answer": "Budapest",
+      "options": ["Debrecen", "Budapest", "Szeged", "Pecs"]
+    },
+    {
+      "id": 48,
+      "question": "Which country is known for Machu Picchu?",
+      "answer": "Peru",
+      "options": ["Peru", "Brazil", "Chile", "Argentina"]
+    },
+    {
+      "id": 49,
+      "question": "What is the capital of Ireland?",
+      "answer": "Dublin",
+      "options": ["Cork", "Dublin", "Galway", "Limerick"]
+    },
+    {
+      "id": 50,
+      "question": "Which country is famous for maple leaves?",
+      "answer": "Canada",
+      "options": ["USA", "Canada", "UK", "Australia"]
+    },
+    {
+      "id": 51,
+      "question": "Which country is known for maple syrup?",
+      "answer": "Canada",
+      "options": ["USA", "Canada", "Russia", "Norway"]
+    },
+    {
+      "id": 52,
+      "question": "What is the capital of New Zealand?",
+      "answer": "Wellington",
+      "options": ["Auckland", "Wellington", "Christchurch", "Hamilton"]
+    },
+    {
+      "id": 53,
+      "question": "Which country is famous for the Colosseum?",
+      "answer": "Italy",
+      "options": ["Greece", "Italy", "Turkey", "Spain"]
+    },
+    {
+      "id": 54,
+      "question": "What is the capital of Finland?",
+      "answer": "Helsinki",
+      "options": ["Espoo", "Tampere", "Helsinki", "Vantaa"]
+    },
+    {
+      "id": 55,
+      "question": "Which country is known for the Serengeti National Park?",
+      "answer": "Tanzania",
+      "options": ["Kenya", "Tanzania", "South Africa", "Botswana"]
+    },
+    {
+      "id": 56,
+      "question": "What is the capital of Belgium?",
+      "answer": "Brussels",
+      "options": ["Antwerp", "Brussels", "Ghent", "Bruges"]
+    },
+    {
+      "id": 57,
+      "question": "Which country is famous for the Acropolis?",
+      "answer": "Greece",
+      "options": ["Italy", "Greece", "Turkey", "Egypt"]
+    },
+    {
+      "id": 58,
+      "question": "What is the capital of Norway?",
+      "answer": "Oslo",
+      "options": ["Bergen", "Trondheim", "Oslo", "Stavanger"]
+    },
+    {
+      "id": 59,
+      "question": "Which country is known for the Galápagos Islands?",
+      "answer": "Ecuador",
+      "options": ["Peru", "Ecuador", "Colombia", "Chile"]
+    },
+    {
+      "id": 60,
+      "question": "What is the capital of Czech Republic?",
+      "answer": "Prague",
+      "options": ["Brno", "Ostrava", "Prague", "Plzen"]
+    },
+    {
+      "id": 61,
+      "question": "What is the capital of the Philippines?",
+      "answer": "Manila",
+      "options": ["Manila", "Cebu", "Davao", "Quezon City"]
+    },
+    {
+      "id": 62,
+      "question": "Which sea lies between Africa and the Arabian Peninsula?",
+      "answer": "Red Sea",
+      "options": ["Red Sea", "Black Sea", "Mediterranean Sea", "Baltic Sea"]
+    },
+    {
+      "id": 63,
+      "question": "What is the largest island in the world?",
+      "answer": "Greenland",
+      "options": ["Greenland", "New Guinea", "Borneo", "Madagascar"]
+    },
+    {
+      "id": 64,
+      "question": "Which river flows through Baghdad?",
+      "answer": "Tigris",
+      "options": ["Euphrates", "Tigris", "Nile", "Jordan"]
+    },
+    {
+      "id": 65,
+      "question": "What is the capital of Chile?",
+      "answer": "Santiago",
+      "options": ["Valparaíso", "Santiago", "Concepción", "Antofagasta"]
+    },
+    {
+      "id": 66,
+      "question": "Which country has the most time zones (including overseas territories)?",
+      "answer": "France",
+      "options": ["Russia", "USA", "France", "China"]
+    },
+    {
+      "id": 67,
+      "question": "What is the capital of Vietnam?",
+      "answer": "Hanoi",
+      "options": ["Hanoi", "Ho Chi Minh City", "Da Nang", "Hue"]
+    },
+    {
+      "id": 68,
+      "question": "In which US state is the Grand Canyon located?",
+      "answer": "Arizona",
+      "options": ["Utah", "Arizona", "Nevada", "Colorado"]
+    },
+    {
+      "id": 69,
+      "question": "What is the deepest ocean trench in the world?",
+      "answer": "Mariana Trench",
+      "options": [
+        "Mariana Trench",
+        "Tonga Trench",
+        "Philippine Trench",
+        "Kuril–Kamchatka Trench"
+      ]
+    },
+    {
+      "id": 70,
+      "question": "Which mountain range is commonly considered the boundary between Europe and Asia?",
+      "answer": "Ural Mountains",
+      "options": ["Alps", "Ural Mountains", "Caucasus", "Carpathians"]
+    },
+    {
+      "id": 71,
+      "question": "What is the capital of Colombia?",
+      "answer": "Bogotá",
+      "options": ["Bogotá", "Medellín", "Cali", "Barranquilla"]
+    },
+    {
+      "id": 72,
+      "question": "Which strait divides the European and Asian parts of Turkey?",
+      "answer": "Bosporus",
+      "options": ["Bosporus", "Gibraltar", "Hormuz", "Malacca"]
+    },
+    {
+      "id": 73,
+      "question": "What is the currency of Japan?",
+      "answer": "Yen",
+      "options": ["Yuan", "Won", "Yen", "Dollar"]
+    },
+    {
+      "id": 74,
+      "question": "Casablanca is a major city in which country?",
+      "answer": "Morocco",
+      "options": ["Morocco", "Algeria", "Tunisia", "Libya"]
+    },
+    {
+      "id": 75,
+      "question": "What is the capital of Peru?",
+      "answer": "Lima",
+      "options": ["Lima", "Cusco", "Arequipa", "Trujillo"]
+    },
+    {
+      "id": 76,
+      "question": "Which river flows through London?",
+      "answer": "Thames",
+      "options": ["Thames", "Seine", "Rhine", "Danube"]
+    },
+    {
+      "id": 77,
+      "question": "Which is the smallest independent country by land area?",
+      "answer": "Vatican City",
+      "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"]
+    },
+    {
+      "id": 78,
+      "question": "Transylvania is a historic region located in which country?",
+      "answer": "Romania",
+      "options": ["Romania", "Hungary", "Bulgaria", "Serbia"]
+    },
+    {
+      "id": 79,
+      "question": "What is the capital of the United Arab Emirates?",
+      "answer": "Abu Dhabi",
+      "options": ["Abu Dhabi", "Dubai", "Sharjah", "Ajman"]
+    },
+    {
+      "id": 80,
+      "question": "Which lake is the largest freshwater lake by surface area?",
+      "answer": "Lake Superior",
+      "options": [
+        "Lake Victoria",
+        "Lake Superior",
+        "Lake Baikal",
+        "Lake Tanganyika"
+      ]
+    }
+  ]
+}

@@ -1,13 +1,30 @@
 import React from 'react';
 
-const GameUI = ({ score, highScore, feedback, gameOver, onRestart }) => {
+const GameUI = ({
+  score,
+  highScore,
+  feedback,
+  gameOver,
+  onRestart,
+  onHome,
+}) => {
   if (gameOver) {
     return (
-      <div className="app">
+      <div className="game-over">
         <h1>Game Over!</h1>
         <p>Your score: {score}</p>
         <p>High Score: {highScore}</p>
-        <button onClick={onRestart}>Play Again</button>
+        <div
+          style={{
+            display: 'flex',
+            gap: '12px',
+            justifyContent: 'center',
+            marginTop: 12,
+          }}
+        >
+          <button onClick={onRestart}>Play Again</button>
+          <button onClick={onHome}>Home</button>
+        </div>
       </div>
     );
   }

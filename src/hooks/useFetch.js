@@ -21,7 +21,9 @@ const useFetch = (url, options = {}) => {
     };
 
     if (url) fetchData();
-  }, [url]);
+
+    // include options in deps so changes to headers/body trigger refetch
+  }, [url, options]);
 
   return { data, error, loading };
 };

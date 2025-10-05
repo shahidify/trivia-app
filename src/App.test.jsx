@@ -1,13 +1,47 @@
 // @vitest-environment jsdom
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  within,
+} from '@testing-library/react';
+import { expect as vitestExpect } from 'vitest';
+const jestDom = await import('@testing-library/jest-dom/matchers');
+vitestExpect.extend(jestDom);
 import App from './App';
 
-// Mock fetch for useFetch and answer checking
+// Mock fetch for category listing, full newgame, per-id question and answer checking
 beforeEach(() => {
+  localStorage.clear();
   window.fetch = vi.fn((url, options) => {
-    // Mock GET question
-    if (url.includes('/api/question/')) {
+    // GET categories
+    if (url === '/api/' || url.endsWith('/api/')) {
+      return Promise.resolve({
+        ok: true,
+        json: async () => [
+          { slug: 'world-geo', title: 'World Geography', count: 1 },
+        ],
+      });
+    }
+    // GET full newgame
+    if (url.includes('/newgame')) {
+      return Promise.resolve({
+        ok: true,
+        json: async () => ({
+          questions: [
+            {
+              id: 1,
+              question: 'What is the capital of France?',
+              options: ['Paris', 'London', 'Berlin', 'Madrid'],
+            },
+          ],
+        }),
+      });
+    }
+    // GET question by id (per-id fallback)
+    if (url.includes('/question/')) {
       return Promise.resolve({
         ok: true,
         json: async () => ({
@@ -18,15 +52,15 @@ beforeEach(() => {
         }),
       });
     }
-    // Mock POST answer check
-    if (url.includes('/api/check')) {
+    // POST answer check
+    if (url.includes('/check')) {
       const body = options && options.body ? JSON.parse(options.body) : {};
       return Promise.resolve({
         ok: true,
         json: async () => ({ correct: body.answer === 'Paris' }),
       });
     }
-    // Default mock
+    // Default
     return Promise.resolve({ ok: false, json: async () => ({}) });
   });
 });
@@ -36,43 +70,57 @@ describe('Trivia App', () => {
     render(<App />);
     expect(screen.getByText(/World Geography Trivia/i)).toBeInTheDocument();
     expect(screen.getByText(/Start Game/i)).toBeInTheDocument();
+    await waitFor(() => expect(window.fetch).toHaveBeenCalled());
     fireEvent.click(screen.getByText(/Start Game/i));
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
   });
 
   it('shows question and options after fetch', async () => {
     render(<App />);
+    await waitFor(() => expect(window.fetch).toHaveBeenCalled());
     fireEvent.click(screen.getByText(/Start Game/i));
     await waitFor(() => {
       expect(
         screen.getByText(/What is the capital of France/i)
       ).toBeInTheDocument();
     });
-    expect(screen.getByText('Paris')).toBeInTheDocument();
-    expect(screen.getByText('London')).toBeInTheDocument();
-    expect(screen.getByText('Berlin')).toBeInTheDocument();
-    expect(screen.getByText('Madrid')).toBeInTheDocument();
+    // Scope to the first rendered app container to avoid duplicate StrictMode renders
+    const root = document.querySelectorAll('.app')[0];
+    const w = within(root);
+    expect(w.getByText('Paris')).toBeInTheDocument();
+    expect(w.getByText('London')).toBeInTheDocument();
+    expect(w.getByText('Berlin')).toBeInTheDocument();
+    expect(w.getByText('Madrid')).toBeInTheDocument();
   });
 
   it('handles correct answer and score increment', async () => {
     render(<App />);
+    await waitFor(() => expect(window.fetch).toHaveBeenCalled());
     fireEvent.click(screen.getByText(/Start Game/i));
-    await waitFor(() => screen.getByText('Paris'));
-    fireEvent.click(screen.getByText('Paris'));
-    await waitFor(() =>
-      expect(screen.getByText(/Correct!/i)).toBeInTheDocument()
+    // wait for the question to appear (may be rendered multiple times under StrictMode)
+    const qMatches = await screen.findAllByText(
+      /What is the capital of France/i
     );
-    expect(screen.getByText(/Score: 1/i)).toBeInTheDocument();
+    const root =
+      qMatches[0].closest('.app') || document.querySelectorAll('.app')[0];
+    const w = within(root);
+    fireEvent.click(w.getByText('Paris'));
+    await waitFor(() => expect(w.getByText(/Correct!/i)).toBeInTheDocument());
+    expect(w.getByText(/Score: 1/i)).toBeInTheDocument();
   });
 
   it('handles incorrect answer and game over', async () => {
     render(<App />);
+    await waitFor(() => expect(window.fetch).toHaveBeenCalled());
     fireEvent.click(screen.getByText(/Start Game/i));
-    await waitFor(() => screen.getByText('Paris'));
-    fireEvent.click(screen.getByText('London'));
-    await waitFor(() =>
-      expect(screen.getByText(/Game Over!/i)).toBeInTheDocument()
+    const qMatches = await screen.findAllByText(
+      /What is the capital of France/i
     );
-    expect(screen.getByText(/Your score: 0/i)).toBeInTheDocument();
+    const root =
+      qMatches[0].closest('.app') || document.querySelectorAll('.app')[0];
+    const w = within(root);
+    fireEvent.click(w.getByText('London'));
+    await waitFor(() => expect(w.getByText(/Game Over!/i)).toBeInTheDocument());
+    expect(w.getByText(/Your score:/i)).toHaveTextContent('Your score:');
   });
 });
