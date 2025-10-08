@@ -1,17 +1,17 @@
 import React from 'react';
 
-const GameUI = ({
-  score,
-  highScore,
-  feedback,
-  gameOver,
-  onRestart,
-  onHome,
-}) => {
+const GameUI = ({ score, highScore, feedback, result, onRestart, onHome }) => {
+  const gameOver = !!result;
+  const won = result === 'won';
   if (gameOver) {
     return (
       <div className="game-over">
-        <h1>Game Over!</h1>
+        <h1>{won ? 'You Won!' : 'Game Over!'}</h1>
+        {won ? (
+          <p>Congratulations — you finished all questions!</p>
+        ) : (
+          <p>Better luck next time.</p>
+        )}
         <p>Your score: {score}</p>
         <p>High Score: {highScore}</p>
         <div

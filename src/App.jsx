@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     let mounted = true;
-    const tryFetch = async () => {
+    const fetchCategories = async () => {
       const urls = ['http://localhost:5000/api/', '/api/'];
       for (const u of urls) {
         try {
@@ -43,9 +43,13 @@ function App() {
       setCategories([]);
       console.error('Failed to load categories from /api/');
     };
-    tryFetch();
+    fetchCategories();
+    // expose on window for quick retry in dev (optional)
+    window.__retryFetchCategories = fetchCategories;
     return () => {
       mounted = false;
+      // cleanup dev helper
+      delete window.__retryFetchCategories;
     };
   }, []);
 
@@ -60,7 +64,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [feedback, setFeedback] = useState(null);
-  const [gameOver, setGameOver] = useState(false);
+  // result: null = in progress, 'won' = finished all questions, 'lost' = incorrect or error
+  const [result, setResult] = useState(null);
 
   // Use useFetch for fetching question
   const {
@@ -68,7 +73,7 @@ function App() {
     error: questionError,
     loading: questionLoading,
   } = useFetch(
-    started && !gameOver && currentId
+    started && !result && currentId
       ? `http://localhost:5000/api/${selectedCategory}/question/${currentId}`
       : null
   );
@@ -79,7 +84,7 @@ function App() {
 
   // Handle error from useFetch
   if (questionError) {
-    if (!gameOver) setGameOver(true);
+    if (!result) setResult('lost');
   }
 
   // Prepare options (memoized per-question so they don't reshuffle on unrelated re-renders)
@@ -123,7 +128,7 @@ function App() {
               setQIndex((qi) => {
                 const next = qi + 1;
                 if (next >= questionsArr.length) {
-                  setGameOver(true);
+                  setResult('won');
                   return qi;
                 }
                 // no need to set currentId because we read from questionsArr directly
@@ -134,7 +139,7 @@ function App() {
               setIndex((i) => {
                 const next = i + 1;
                 if (!order || next >= order.length) {
-                  setGameOver(true);
+                  setResult('won');
                   return i;
                 }
                 setCurrentId(order[next]);
@@ -144,7 +149,7 @@ function App() {
           }, 1000);
         } else {
           setFeedback('Incorrect!');
-          setGameOver(true);
+          setResult('lost');
         }
       });
   };
@@ -160,7 +165,7 @@ function App() {
     setCurrentId(null);
     setScore(0);
     setFeedback(null);
-    setGameOver(false);
+    setResult(null);
     // setQuestion(null) removed, question is managed by useFetch
     // fetch a new shuffled order or full questions from server for the selected category
     fetch(`http://localhost:5000/api/${cat}/newgame?full=true`)
@@ -196,7 +201,7 @@ function App() {
     setCurrentId(null);
     setScore(0);
     setFeedback(null);
-    setGameOver(false);
+    setResult(null);
   };
 
   if (!started) {
@@ -235,11 +240,11 @@ function App() {
         score={score}
         highScore={highScore}
         feedback={feedback}
-        gameOver={gameOver}
+        result={result}
         onRestart={restartGame}
         onHome={goHome}
       />
-      {!gameOver && (
+      {!result && (
         <div className="question-container">
           <Question question={currentQuestion} />
           <Options
